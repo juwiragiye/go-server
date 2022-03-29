@@ -17,7 +17,7 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 		 return
 	}
 
-	fmt.Fprintf(w, "Hello!")
+	fmt.Fprintf(w, "You got in")
 }
 
 type Person struct {
@@ -34,7 +34,7 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if r.Method != "POST" {
-		 http.Error(w, "http method not supported", http.StatusMethodNotAllowed)
+		 http.Error(w, "http method not supported o=you need post", http.StatusMethodNotAllowed)
 		 return
 	}
 
